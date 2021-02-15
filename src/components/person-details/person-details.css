@@ -15,6 +15,10 @@
     padding: .25rem;
 }
 
-.person-details .list-group-item .term{
+.person-details .list-group-item .term {
     margin-right: .5rem;
+}
+
+.person-details button {
+    margin-top: 5px;
 }
