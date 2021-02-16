@@ -4,8 +4,9 @@ import Header from '../header'
 import RandomPlanet from '../random-planet'
 import ErrorBoundry from '../error-boundry'
 import ItemDetails, {Record} from '../item-details/item-details'
-import Row from '../row'
 import SwapiService from '../../services/swapi-service'
+import {PersonList, PlanetList, StarshipList, PersonDetails,
+  PlanetDetails, StarshipDetails} from '../sw-components'
 
 import './app.css'
 
@@ -33,7 +34,8 @@ export default class App extends Component {
 
     const {
       getPerson, getStarship,
-      getPersonImage, getStarshipImage
+      getPersonImage, getStarshipImage,
+      getAllPeople, getAllPlanets
     } = this.swapiService
 
     const personDetails = (
@@ -64,26 +66,25 @@ export default class App extends Component {
       <ErrorBoundry>
         <div className="stardb-app">
           <Header/>
-          {planet}
 
-          <Row
-            left={personDetails}
-            right={starshipDetails}
-          />
+          <PersonDetails itemId={11}/>
+          <StarshipDetails itemId={9}/>
+          <PlanetDetails itemId={5}/>
+
+          <PersonList onItemSelected={() => {}}>
+            {({name}) => <span>{name}</span>}
+          </PersonList>
+
+          <StarshipList onItemSelected={() => {}}>
+            {({name}) => <span>{name}</span>}
+          </StarshipList>
+
+          <PlanetList onItemSelected={() => {}}>
+            {({name}) => <span>{name}</span>}
+          </PlanetList>
+
         </div>
       </ErrorBoundry>
     )
   }
 }
-
-//{/*<div className="row mb2 button-row">*/}
-//{/*  <button*/}
-//{/*    className="toggle-planet btn btn-warning btn-lg"*/}
-//{/*    onClick={this.toggleRandomPlanet}*/}
-//{/*  >*/}
-//{/*    Toggle Random Planet*/}
-//{/*  </button>*/}
-//{/*  <ErrorButton/>*/}
-//{/*</div>*/}
-
-//{/*<PeoplePage/>*/}
