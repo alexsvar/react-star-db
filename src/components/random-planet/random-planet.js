@@ -80,7 +80,7 @@ const PlanetView = ({planet}) => {
       />
 
       <div>
-        <h4>{name}</h4>
+        <h4 className="name">{name}</h4>
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
             <span className="term">Population</span>

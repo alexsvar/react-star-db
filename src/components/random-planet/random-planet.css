@@ -12,6 +12,10 @@
     margin-right: 1rem;
 }
 
+.random-planet .name {
+    margin-left: 1rem;
+}
+
 .random-planet .list-group {
     margin: 1rem 0 0 1rem;
 }
