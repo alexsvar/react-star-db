@@ -7,6 +7,7 @@ import SwapiService from '../../services/swapi-service'
 
 import './random-planet.css'
 
+
 export default class RandomPlanet extends Component {
   static defaultProps = {
     updateInterval: 10000

@@ -13,8 +13,8 @@ const PeoplePage = ({match, history}) => {
 
   return (
     <Row
-      left={<PersonList onItemSelected={id => history.push(id)}/>}
-      right={<PersonDetails itemId={id}/>}
+      left={<PersonList onItemSelected={id => history.push(id)} />}
+      right={<PersonDetails itemId={id} />}
     />
   )
 }

@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 
 import './error-button.css'
 
+
 export default class ErrorButton extends Component {
 
   state = {
@@ -14,9 +15,8 @@ export default class ErrorButton extends Component {
     }
 
     return (
-      <button
-        className="error-button btn btn-danger btn-lg"
-        onClick={() => this.setState({renderError: true})}>
+      <button className="error-button btn btn-danger btn-lg"
+              onClick={() => this.setState({renderError: true})}>
         Throw Error
       </button>
     )
